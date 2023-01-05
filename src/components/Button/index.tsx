@@ -1,13 +1,6 @@
 import { ButtonContainer } from "./styles";
 import { IButtonProps } from "./types";
 
-const Button = ({ title, onClick, isDisabled }: IButtonProps) => {
-  return (
-    isDisabled === true ?
-    <ButtonContainer onClick={onClick} >{title}</ButtonContainer>
-    :
-    <ButtonContainer onClick={onClick} disabled >{title}</ButtonContainer>
-  )
-};
+const Button = ({ title, onClick, isDisabled }: IButtonProps) => <ButtonContainer onClick={onClick} disabled={isDisabled} >{title}</ButtonContainer>
 
 export default Button;
